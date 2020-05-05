@@ -1,0 +1,115 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Decentraliced Learning materials</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet"> 
+
+    <style>
+
+h1 {
+  font-weight: bold;
+  
+}
+
+.container{
+  font-family: Arial, Helvetica, sans-serif;
+   
+}
+body {
+  
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(0, 10, 26);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: rgb(0, 61, 153);
+}
+
+</style>
+
+  </head>
+  <body>
+  <ul>
+    <li><a href="index.html">Submit</a></li>
+    <li><a href="vote.html">Review and Vote</a></li>
+    <li><a href="buy.html">Buy</a></li>
+  </ul>
+
+    <div class="container" style="width: 650px;">
+      <div class="row">
+        <div class="col-lg-12">
+
+          <div id="loader">
+            <p class="text-center">Loading...</p>
+          </div>
+          <div id="content" style="display: none;">
+
+                      <h1 class="text-center">Vote my Solid Learning</h1>
+          <hr/>
+          <br/>
+
+          <div id="votingInProgress">
+            <h3 class="text-center">Voting in progress...</h3>
+            <h5 class="text-center">In the meantime you can review and vote or purchase items in the store</h5>
+          </div>
+  
+            <form onSubmit="App.addCandidate(); return false;">
+              <div class="form-group">
+                <label for="candidateName">Enter your hashed material:</label>
+                <div class="input-group">
+                  <input class="form-control input-lg" id="candidateName">
+                  </input>
+                  <span class="input-group-btn">
+                    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                  </span>
+                </div>
+              </div>
+            </form>
+            <br>
+
+            <br>
+            <hr>
+
+            <p id="accountAddress" class="text-center"></p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+
+  </body>
+</html>
